@@ -1,0 +1,254 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* dynamic form */
+.fade-hint{
+  transition: .5s;
+  opacity: 0;
+  font-size: 8pt;
+}
+.add-hint{
+  transition: .5s;
+  opacity: .5;
+  font-size: 8pt;
+}
+
+/* Temporary CSS */
+/* Used in Current Service Request & New Service Report */
+#getIconColor.beIconRed i{
+  color: #f64e60;
+  font-size: 22px !important;
+}
+#getIconColor.beIconBlue i{
+  color: #3699ff;
+  font-size: 22px !important;
+}
+#getIconColor.beIconGreen i{
+  color: #0bb783;
+  font-size: 22px !important;
+}
+#getIconColor.beIconYellow i{
+  color: #ffa800;
+  font-size: 22px !important;
+}
+.element-container {
+  max-height: 1px;
+  overflow: hidden;
+  transition: 1s ;
+}
+
+.element-container.open {
+  max-height: 1000px; 
+  transition: 1s 
+}
+.form-element:hover{
+  background-color: rgba(250, 250, 250, .8);
+  border-radius: 3px;
+}
+.main-label{
+  margin: 0 10px;
+  padding: 0 4px;
+  padding-top: 5px;
+  position: absolute;
+  top: -15px;
+  background-color: white;
+  color:gray;
+  transition: .5s;
+  cursor: text;
+}
+.input-label{
+  color: rgb(70,70, 70);
+  padding: 3px 5px;
+  max-width: max-content;
+  cursor: text;
+  transition: .3s;
+
+}
+.main-label:focus , .input-label:focus{
+  outline: none;
+  color: rgb(69, 138, 179);
+  transition: .2s;
+  border-radius: 3px;
+  background-color: rgba(200, 200, 200, .3);
+  margin: -3px 0 3px 0;
+  transition: .3s;
+}
+
+.inputs-elements >div{
+  position: relative;
+  margin-bottom: 30px;
+}
+.input-actions{
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  color: gainsboro;
+  transition: .6s;
+}
+.input-actions i:hover{
+  cursor: pointer;
+  transition: .4s;
+}
+.input-actions .fa-circle-plus:hover{
+  color: green;
+}
+.input-actions .fa-trash-can:hover{
+  color: darkred;
+}
+.input-actions-right{
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  color: gainsboro;
+  transition: .6s;
+}
+.input-actions-left{
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  color: gainsboro;
+  transition: .6s;
+}
+
+.input-actions .fa-trash-can:hover,.input-actions-right .fa-trash-can:hover,.input-actions-left .fa-trash-can:hover{
+  color: darkred;
+}
+.input-cont{
+  margin-bottom: 4px;
+}
+.input-cont .fa-square-minus{
+  color: gainsboro;
+  opacity: .8;
+  margin:  0 5px;
+  transition: .6s;
+}
+.input-cont .fa-square-minus:hover{
+  color: darkred;
+  cursor: pointer;
+  opacity: 1;
+  transition: .5s;
+}
+.type-name{
+  /* color: gainsboro; */
+  font-size: 8pt;
+}
+.icon-no-input{
+  color: gray;
+  opacity: .2;
+  font-size: 50pt;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+}
+.clear-all{
+  position: absolute;
+  left: 15px;
+  font-size: 10pt;
+  top: 10px;
+  color: gray;
+  transition: .3s;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.shift_right{
+  right:15px !important;
+  position: absolute !important;
+
+}
+.shift_left_delete_all{
+  position: absolute;
+  left: 15px;
+  font-size: 10pt;
+  top: 10px;
+  color: gray;
+  transition: .3s;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.shift_right_delete_all{
+  position: absolute;
+  right: 15px;
+  font-size: 10pt;
+  top: 10px;
+  color: gray;
+  transition: .3s;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.clear-all:hover,.shift_right_delete_all:hover,.shift_left_delete_all:hover{
+  cursor: pointer;
+  transition: .5s;
+  color: white;
+  background-color: darkred;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 2px;
+}
+.required-option{
+  color:gray;
+  transition: .3s;
+  cursor: pointer;
+  padding: 0px 2px;
+  font-size: 12pt;
+}
+.required-option:hover{
+  color:red;
+  opacity: .5;
+  transition: .5s;
+}
+.active-required{
+  color: red;
+}
+.add-select{
+  font-size: 20pt;
+  margin-top: 8px;
+  color: #3699ff;
+  cursor: pointer;
+  transition: .1s
+}
+.add-select:hover{
+  margin-right: -3px;
+  transition: .1s
+}
+.add-select:active{
+  color: darkblue;
+  transition: .3s
+
+}
